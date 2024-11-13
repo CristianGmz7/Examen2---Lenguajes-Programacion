@@ -17,6 +17,9 @@ public class EntryEntity : BaseEntity
     [Column("description")]
     public string Description { get; set; }
 
+    [Column("is_editable")]
+    public bool IsEditable { get; set; }
+
     //conexion de la relacion uno a muchos con la tabla intermedia
     public virtual IEnumerable<EntryDetailEntity> Details { get; set; }
 

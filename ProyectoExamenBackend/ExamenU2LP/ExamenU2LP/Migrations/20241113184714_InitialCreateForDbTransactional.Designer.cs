@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ExamenU2LP.Migrations
 {
     [DbContext(typeof(TransactionalContext))]
-    [Migration("20241113081201_InitialCreateForDbTransactional")]
+    [Migration("20241113184714_InitialCreateForDbTransactional")]
     partial class InitialCreateForDbTransactional
     {
         /// <inheritdoc />
@@ -252,6 +252,10 @@ namespace ExamenU2LP.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("description");
+
+                    b.Property<bool>("IsEditable")
+                        .HasColumnType("bit")
+                        .HasColumnName("is_editable");
 
                     b.Property<string>("UpdatedBy")
                         .HasMaxLength(450)

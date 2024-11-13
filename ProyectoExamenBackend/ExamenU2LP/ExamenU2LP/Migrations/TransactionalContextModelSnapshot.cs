@@ -250,6 +250,10 @@ namespace ExamenU2LP.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("description");
 
+                    b.Property<bool>("IsEditable")
+                        .HasColumnType("bit")
+                        .HasColumnName("is_editable");
+
                     b.Property<string>("UpdatedBy")
                         .HasMaxLength(450)
                         .HasColumnType("nvarchar(450)")
