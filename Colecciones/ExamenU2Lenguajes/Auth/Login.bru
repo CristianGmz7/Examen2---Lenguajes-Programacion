@@ -10,9 +10,17 @@ post {
   auth: none
 }
 
+body:json {
+  {
+    "email": "{{emailUser1Value}}",
+    "password": "{{passwordValue}}"
+  }
+}
+
 vars:pre-request {
-  emailValue: 
-  passwordValue: 
+  emailUser1Value: user1@examenu2.edu
+  passwordValue: Temporal01*
+  emailUser2Value: use21@examenu2.edu
 }
 
 script:post-response {
