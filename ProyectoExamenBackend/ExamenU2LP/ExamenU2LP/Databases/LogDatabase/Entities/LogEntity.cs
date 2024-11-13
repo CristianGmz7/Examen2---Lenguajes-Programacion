@@ -10,7 +10,7 @@ public class LogEntity
     public Guid Id { get; set; }
 
     [Column("action")]
-    public string Action { get; set; }      //GET, POST, PUT, DELETE
+    public string Action { get; set; }      
 
     [Column("date")]
     public DateTime Date { get; set; }

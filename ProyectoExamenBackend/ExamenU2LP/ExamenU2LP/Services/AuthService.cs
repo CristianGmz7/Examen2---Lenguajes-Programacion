@@ -1,4 +1,5 @@
 ﻿using ExamenU2LP.Databases.LogDatabase;
+using ExamenU2LP.Databases.LogDatabase.Entities;
 using ExamenU2LP.Databases.TransactionalDatabase;
 using ExamenU2LP.Databases.TransactionalDatabase.Entities;
 using ExamenU2LP.Dtos.Auth;
@@ -49,6 +50,17 @@ public class AuthService : IAuthService
             dto.Password,
             isPersistent: false,
             lockoutOnFailure: false);
+
+        var logEntity = new LogEntity
+        {
+            Id = Guid.NewGuid(),
+            Date = DateTime.Now,
+            Action = result.Succeeded ? "Sesión iniciada correctamente" : "Error al iniciar sesión, intentelo más tarde",
+            UserId = result.Succeeded ? (await _userManager.FindByEmailAsync(dto.Email)).Id : null
+        };
+
+        await _logContext.Logs.AddAsync(logEntity);
+        await _logContext.SaveChangesAsync();
 
         if (result.Succeeded)
         {
@@ -158,8 +170,4 @@ public class AuthService : IAuthService
         return Convert.ToBase64String(randomNumber);
     }
 
-    //UNA VEZ TERMINADO AQUI IMPLEMENTARLO EN EL CONTROLADOR
-    //HACER LA MIGRACION Y CREACION DE BASE DE DATOS
-    //INICIAR EL SEEDER
-    //PROBAR ESTE METODO EN EL BRUNO
 }
