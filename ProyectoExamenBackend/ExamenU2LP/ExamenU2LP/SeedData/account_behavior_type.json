@@ -1,0 +1,14 @@
+[
+    {
+        "Id": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "Type": "Debe"
+    },
+    {
+        "Id": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "Type": "Haber"
+    },
+    {
+        "Id": "33383121-f8a4-4ac7-9f8c-d25ad39abd0f",
+        "Type": "No aplica"
+    }
+]

@@ -1,0 +1,6 @@
+@ExamenU2LP_HostAddress = http://localhost:5191
+
+GET {{ExamenU2LP_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

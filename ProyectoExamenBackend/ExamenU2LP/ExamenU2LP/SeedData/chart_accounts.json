@@ -1,0 +1,1090 @@
+[
+    {
+        "AccountNumber": "0",
+        "Name": "No aplica",
+        "BehaviorTypeId": "33383121-f8a4-4ac7-9f8c-d25ad39abd0f",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "0",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "1",
+        "Name": "Activos",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "0",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "101",
+        "Name": "Activos Corrientes",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "1",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10101",
+        "Name": "Efectivo y equivalente de efectivo",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "101",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10101001",
+        "Name": "Caja",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10101",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10101002",
+        "Name": "Bancos",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10101",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10101003",
+        "Name": "Deposito a plazo de 12 meses",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10101",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10101004",
+        "Name": "Bonos hasta 12 meses",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10101",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10101005",
+        "Name": "Inversiones temporales",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10101",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10102",
+        "Name": "Cuentas por cobrar",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "101",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10102001",
+        "Name": "Clientes",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10102",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10102002",
+        "Name": "Deudores varios",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10102",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10102003",
+        "Name": "Servicios por cobrar",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10102",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10102004",
+        "Name": "Documentos por cobrar",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10102",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10102005",
+        "Name": "Rentas por cobrar",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10102",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10102006",
+        "Name": "Funcionarios y empleados",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10102",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10103",
+        "Name": "Inventarios",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "101",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10104",
+        "Name": "Gastos pagados por anticipado",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "101",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10104001",
+        "Name": "Seguros pagados por anticipado",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10104",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10104002",
+        "Name": "Rentas pagadas por anticipado",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10104",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10104003",
+        "Name": "Impuesto sobre ventas pagado",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10104",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10104004",
+        "Name": "Intereses pagados por anticipado",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10104",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10104005",
+        "Name": "Publicidad pagada por anticipado",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10104",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10104006",
+        "Name": "Anticipo a empleados",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10104",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10104007",
+        "Name": "Papelería y útiles de oficina",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10104",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10104008",
+        "Name": "Material de empaque",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10104",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10104009",
+        "Name": "Material de aseo",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10104",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10104010",
+        "Name": "Anticipo a proveedores",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10104",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "102",
+        "Name": "Activos no Corrientes",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "1",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10201",
+        "Name": "Cuentas por cobrar",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "102",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10201001",
+        "Name": "Clientes",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10201",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10201002",
+        "Name": "Deudores varios",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10201",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10201003",
+        "Name": "Servicios por cobrar",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10201",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10201004",
+        "Name": "Documentos por cobrar",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10201",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10201005",
+        "Name": "Rentas por cobrar",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10201",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10201006",
+        "Name": "Funcionarios y empleados",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10201",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10202",
+        "Name": "Inversiones a largo plazo",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "102",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10202001",
+        "Name": "Depósito a plazo fijo más de 12 meses",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10202",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10202002",
+        "Name": "Inversiones en acciones",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10202",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10202003",
+        "Name": "Inversiones en bonos más de 12 meses",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10202",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10203",
+        "Name": "Propiedad Planta y Equipo",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "102",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10203001",
+        "Name": "Terrenos",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10203",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10203002",
+        "Name": "Edificios",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10203",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10203003",
+        "Name": "Maquinaria y equipo",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10203",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10203004",
+        "Name": "Mobiliario y equipo de oficina",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10203",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10203005",
+        "Name": "Equipo de reparto",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10203",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10203006",
+        "Name": "Equipo de transporte",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10203",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10203007",
+        "Name": "Herramientas",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10203",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10203008",
+        "Name": "Equipo de laboratorio",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10203",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10204",
+        "Name": "Activos intangibles",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "102",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10204001",
+        "Name": "Marcas",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10204",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10204002",
+        "Name": "Patentes",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10204",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10204003",
+        "Name": "Derechos de autor",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10204",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10204004",
+        "Name": "Franquicias",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10204",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10204005",
+        "Name": "Aplicaciones de informática",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10204",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10204006",
+        "Name": "Crédito mercantil",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10204",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10205",
+        "Name": "Gastos pagados por anticipado",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "102",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10205001",
+        "Name": "Gastos de organización",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10205",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10205002",
+        "Name": "Gastos de instalación",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10205",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10205003",
+        "Name": "Seguros pagados por anticipado",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10205",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10205004",
+        "Name": "Rentas pagadas por anticipado",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10205",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10205005",
+        "Name": "Intereses pagados por anticipado",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10205",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10205006",
+        "Name": "Publicidas pagada por anticipado",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10205",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10205007",
+        "Name": "Honorarios pagados por anticipado",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10205",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10205008",
+        "Name": "Alquileres pagados por anticipado",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10205",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10206",
+        "Name": "Otros Activos",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "102",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "10206001",
+        "Name": "Depositos en garantia",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "10206",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "2",
+        "Name": "Pasivos",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "0",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "201",
+        "Name": "Pasivos Corrientes",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "2",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20101",
+        "Name": "Cuentas por pagar",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "201",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20101001",
+        "Name": "Proveedores",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20101",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20101002",
+        "Name": "Documentos por pagar",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20101",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20101003",
+        "Name": "Acreedores varios",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20101",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20101004",
+        "Name": "Impuesto sobre la renta",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20101",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20101005",
+        "Name": "Rentas por pagar",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20101",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20101006",
+        "Name": "Aportación solidaria",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20101",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20101007",
+        "Name": "Préstamos bancarios",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20101",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20101008",
+        "Name": "Préstamos hipotecarios",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20101",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20101009",
+        "Name": "Impuesto por pagar",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20101",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20101010",
+        "Name": "Intereses por pagar",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20101",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20102",
+        "Name": "Valores cobrados por anticipado",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "201",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20102001",
+        "Name": "Rentas cobradas por anticipado",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20102",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20102002",
+        "Name": "Anticipo de clientes",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20102",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20102003",
+        "Name": "Intereses cobrados por anticipado",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20102",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "202",
+        "Name": "Pasivos no corrientes",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "2",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20201",
+        "Name": "Cuentas por pagar",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "202",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20201001",
+        "Name": "Documentos por pagar",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20201",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20201002",
+        "Name": "Acreedores varios",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20201",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20201003",
+        "Name": "Préstamos bancarios",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20201",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20201004",
+        "Name": "Préstamos hipotecarios",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20201",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20201005",
+        "Name": "Rentas por pagar",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20201",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20201006",
+        "Name": "Alquileres por pagar",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20201",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20201007",
+        "Name": "Intereses por pagar",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20201",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20201008",
+        "Name": "Impuesto por pagar",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20201",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20202",
+        "Name": "Valores cobrados por anticipado",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "202",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20202001",
+        "Name": "Rentas cobradas por anticipado",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20202",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20202002",
+        "Name": "Anticipo de clientes",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20202",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "20202003",
+        "Name": "Intereses cobrados por anticipado",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "20202",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "3",
+        "Name": "Patrimonio",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "0",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "301",
+        "Name": "Capital Social",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "3",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "301001",
+        "Name": "Aportaciones de los socios",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "301",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "302",
+        "Name": "Reservas Acumuladas",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "3",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "302001",
+        "Name": "Reserva legal",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "302",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "302002",
+        "Name": "Reserva de prevención",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "302",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "302003",
+        "Name": "Reserva de reinversión",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "302",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "302004",
+        "Name": "Reserva de educación",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "302",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "303",
+        "Name": "Resultados acumulados",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "3",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "303001",
+        "Name": "Utilidades acumuladas",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "303",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "303002",
+        "Name": "Pérdidas no aplicadas",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "303",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "303003",
+        "Name": "Utilidad del ejercicio",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "303",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "303004",
+        "Name": "Pérdida del ejercicio",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "303",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "4",
+        "Name": "Ingresos",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "0",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "401",
+        "Name": "Ingresos Operacionales",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "4",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "401001",
+        "Name": "Ventas",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "401",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "401002",
+        "Name": "Ingresos por servicios",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "401",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "401003",
+        "Name": "Ingresos por intereses",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "401",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "401004",
+        "Name": "Ingresos por alquileres",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "401",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "402",
+        "Name": "Ingresos No Operacionales",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "4",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "402001",
+        "Name": "Ganancias de inversiones",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "402",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "402002",
+        "Name": "Otros ingresos",
+        "BehaviorTypeId": "c4a995c4-c34e-447f-b4ef-56c6c56c1794",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "402",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "5",
+        "Name": "Gastos",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "0",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "501",
+        "Name": "Gastos Operacionales",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "5",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "501001",
+        "Name": "Costo de ventas",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "501",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "501002",
+        "Name": "Sueldos y salarios",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "501",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "501003",
+        "Name": "Alquileres",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "501",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "501004",
+        "Name": "Servicios públicos",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "501",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "501005",
+        "Name": "Materiales y suministros",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "501",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "501006",
+        "Name": "Mantenimiento y reparaciones",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "501",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "501007",
+        "Name": "Gastos de marketing",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "501",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "501008",
+        "Name": "Gastos de transporte",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "501",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "501009",
+        "Name": "Seguro",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "501",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "501010",
+        "Name": "Depreciación",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "501",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "502",
+        "Name": "Gastos No Operacionales",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": false,
+        "ParentAccountNumber": "5",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "502001",
+        "Name": "Gastos financieros",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "502",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "502002",
+        "Name": "Pérdidas en inversiones",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "502",
+        "IsDisabled": false
+    },
+    {
+        "AccountNumber": "502003",
+        "Name": "Otros gastos",
+        "BehaviorTypeId": "07d59baf-75f6-460b-821e-283fcd3feac3",
+        "AllowsMovement": true,
+        "ParentAccountNumber": "502",
+        "IsDisabled": false
+    }
+]

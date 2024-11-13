@@ -1,0 +1,26 @@
+meta {
+  name: Login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{PATH}}/auth/login
+  body: json
+  auth: none
+}
+
+vars:pre-request {
+  emailValue: 
+  passwordValue: 
+}
+
+script:post-response {
+  let response = res.getBody()
+  // respuesta que viene del backend
+  
+  bru.setEnvVar("TOKEN", response.data?.token ?? '')
+  //setea la variable de enterno el TOKEN
+  
+  bru.setEnvVar("REFRESH_TOKEN", response.data?.refreshToken ?? '')
+}

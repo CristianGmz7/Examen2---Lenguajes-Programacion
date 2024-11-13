@@ -1,0 +1,947 @@
+[
+  {
+    "Id": "170afd5b-b5ce-4d54-870c-d3ab7a773dc7",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "1",
+    "Balance": 54000
+  },
+  {
+    "Id": "d9d0fcb8-efbd-490e-930b-87d3857cfc56",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "101",
+    "Balance": 22000
+  },
+  {
+    "Id": "88a452d1-be45-421b-9c48-956e371a3817",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10101",
+    "Balance": 5000
+  },
+  {
+    "Id": "e2d5e982-3011-4f6f-b4b8-9cbefb3f4c08",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10101001",
+    "Balance": 1000
+  },
+  {
+    "Id": "6bb0a4e6-c348-4c9c-94b1-6805f9c3c29f",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10101002",
+    "Balance": 1000
+  },
+  {
+    "Id": "46a8d9ad-d412-4d0d-bd93-ff2ffedb1035",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10101003",
+    "Balance": 1000
+  },
+  {
+    "Id": "b3b37926-7453-4f72-a511-b807b03df49f",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10101004",
+    "Balance": 1000
+  },
+  {
+    "Id": "8a5713b8-3d63-4c97-9ef1-e8e7d0c0a2e5",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10101005",
+    "Balance": 1000
+  },
+  {
+    "Id": "59bef45f-932e-4f03-9b9e-ea77a1b3ad4a",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10102",
+    "Balance": 6000
+  },
+  {
+    "Id": "452e8779-366f-4303-8d14-2e7c9b62d2d9",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10102001",
+    "Balance": 1000
+  },
+  {
+    "Id": "70f45d42-3962-4b1e-8719-2df2b3d15d38",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10102002",
+    "Balance": 1000
+  },
+  {
+    "Id": "45d3f2a2-2027-4d76-8a7b-3a31c68ef0cd",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10102003",
+    "Balance": 1000
+  },
+  {
+    "Id": "b6b2e6d9-b0c9-4ed2-840a-204167313f8e",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10102004",
+    "Balance": 1000
+  },
+  {
+    "Id": "cb2bbd71-e80a-4c5f-9c91-326f5bfa7b3d",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10102005",
+    "Balance": 1000
+  },
+  {
+    "Id": "c920eeb1-8357-46d2-9c77-cedb9e9f632f",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10102006",
+    "Balance": 1000
+  },
+  {
+    "Id": "ae2282d3-d952-45fd-bcba-798dcf96b172",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10103",
+    "Balance": 1000
+  },
+  {
+    "Id": "f5ad207b-930b-41f1-b1b6-666edb92ca52",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10104",
+    "Balance": 10000
+  },
+  {
+    "Id": "3f1730f2-9142-499a-99e8-75d13a5047b6",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10104001",
+    "Balance": 1000
+  },
+  {
+    "Id": "bd95e023-72a9-4569-a90f-c20b8c27ff27",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10104002",
+    "Balance": 1000
+  },
+  {
+    "Id": "b2d9e1af-ff7d-4d4e-8d38-90a3a48bb3b4",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10104003",
+    "Balance": 1000
+  },
+  {
+    "Id": "dacdf78c-3d35-463d-8c28-26759de7a8f8",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10104004",
+    "Balance": 1000
+  },
+  {
+    "Id": "a7dfc72c-e0f5-4fa6-b216-d4eb9b82490a",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10104005",
+    "Balance": 1000
+  },
+  {
+    "Id": "4bb33db4-d8ae-40d2-b38c-d63e4c9b4465",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10104006",
+    "Balance": 1000
+  },
+  {
+    "Id": "3154e02e-f9e3-41e7-b1e6-994de5ac87f5",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10104007",
+    "Balance": 1000
+  },
+  {
+    "Id": "123d7c14-e1ff-4218-8ed5-75f244cd12b2",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10104008",
+    "Balance": 1000
+  },
+  {
+    "Id": "39a7cd3e-9b64-4d8c-bd9e-3b29214f63c7",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10104009",
+    "Balance": 1000
+  },
+  {
+    "Id": "04a67f34-d1a4-44db-9f3b-4a3a7c7a04c9",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10104010",
+    "Balance": 1000
+  },
+  {
+    "Id": "06e47a7e-67be-4f1b-839c-e0e78cad9b8f",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "102",
+    "Balance": 32000
+  },
+  {
+    "Id": "24ffd38d-c97b-4408-8318-f23fb50ff522",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10201",
+    "Balance": 6000
+  },
+  {
+    "Id": "50a0b5db-f423-4ff6-8395-2793a3adbb7a",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10201001",
+    "Balance": 1000
+  },
+  {
+    "Id": "0b98ec6b-7e1e-4d69-83e8-680d2b4df345",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10201002",
+    "Balance": 1000
+  },
+  {
+    "Id": "3bcdfbe6-105b-4c89-9931-2c373fc9c5ae",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10201003",
+    "Balance": 1000
+  },
+  {
+    "Id": "78b1a091-169d-4d1f-ae5b-2e3e5fba1f1b",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10201004",
+    "Balance": 1000
+  },
+  {
+    "Id": "cf3c5f0b-b4e5-4d5b-bc26-2d5a2cb4c1be",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10201005",
+    "Balance": 1000
+  },
+  {
+    "Id": "6e2b07cd-938e-4c8f-9400-1583ecbdf3db",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10201006",
+    "Balance": 1000
+  },
+  {
+    "Id": "44ffeb8c-4200-4a57-8e4f-c5b6fb2c3f5a",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10202",
+    "Balance": 3000
+  },
+  {
+    "Id": "f6ad1e6f-9024-41dc-ae25-2fe6a4691a98",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10202001",
+    "Balance": 1000
+  },
+  {
+    "Id": "25b3faff-e314-4aef-95b1-f23334f3dbfa",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10202002",
+    "Balance": 1000
+  },
+  {
+    "Id": "890e4d3a-e4fb-48d2-9052-7a9b52f1b6f8",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10202003",
+    "Balance": 1000
+  },
+  {
+    "Id": "6c379384-d830-4e7b-92da-e75c47f33da9",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10203",
+    "Balance": 8000
+  },
+  {
+    "Id": "617bbf13-4d4e-4d5d-b0c1-57d319a6d6be",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10203001",
+    "Balance": 1000
+  },
+  {
+    "Id": "4f93fd8c-6480-4b76-9064-8b195dfe5827",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10203002",
+    "Balance": 1000
+  },
+  {
+    "Id": "7121a9d2-e69f-4505-bda4-91e10e05fbd9",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10203003",
+    "Balance": 1000
+  },
+  {
+    "Id": "3b1dc234-5f83-4b83-8b2d-1c66c056a857",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10203004",
+    "Balance": 1000
+  },
+  {
+    "Id": "848e08e7-71b4-4788-9c4c-c3ff36b1db27",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10203005",
+    "Balance": 1000
+  },
+  {
+    "Id": "f141f4df-293a-4d92-9bd6-545e06d7d0ad",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10203006",
+    "Balance": 1000
+  },
+  {
+    "Id": "b64edfe3-f6f4-43ab-9157-2498ffaf5bb7",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10203007",
+    "Balance": 1000
+  },
+  {
+    "Id": "8f92cd4f-c362-4dd5-b2c6-1220e4e8cb5e",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10203008",
+    "Balance": 1000
+  },
+  {
+    "Id": "0864ecdc-4b88-46e9-a703-c6e383cb74c4",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10204",
+    "Balance": 6000
+  },
+  {
+    "Id": "abc8f4d1-2a13-4f3f-9fe5-bb0b8eec7f8d",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10204001",
+    "Balance": 1000
+  },
+  {
+    "Id": "67158eb2-f9ef-4b80-9d84-0c1b8d239af1",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10204002",
+    "Balance": 1000
+  },
+  {
+    "Id": "de84ef1a-8fbd-4b44-b645-635f5bf7deed",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10204003",
+    "Balance": 1000
+  },
+  {
+    "Id": "1e8ec46d-2e7f-4c26-9b25-2fda97e55fb2",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10204004",
+    "Balance": 1000
+  },
+  {
+    "Id": "8a4e7b23-164d-41a3-841f-d4560b3cd1b7",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10204005",
+    "Balance": 1000
+  },
+  {
+    "Id": "e3c0e4d1-8823-4e1c-a2d7-d0b75bdf5ff8",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10204006",
+    "Balance": 1000
+  },
+  {
+    "Id": "460ef46e-6009-48f3-94a9-c321ac22a6e0",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10205",
+    "Balance": 8000
+  },
+  {
+    "Id": "654f9df4-7edb-423b-9d6a-4d6b6c5f58b5",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10205001",
+    "Balance": 1000
+  },
+  {
+    "Id": "0919b6e2-66f5-4e89-b8f5-0d4f99e6c1a2",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10205002",
+    "Balance": 1000
+  },
+  {
+    "Id": "0b7d1df1-74d5-4fd7-a6c3-4f8b5c4e8c6a",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10205003",
+    "Balance": 1000
+  },
+  {
+    "Id": "fd7a8c3b-5f4b-4d6d-b6b3-1d6b4f3e6b7c",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10205004",
+    "Balance": 1000
+  },
+  {
+    "Id": "3b4d7a1e-b5a4-4c2d-b9e6-f7c1a2f3d9e4",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10205005",
+    "Balance": 1000
+  },
+  {
+    "Id": "cf4b7d1f-6e5a-4d9c-8b6f-4f2d3b4e9b6d",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10205006",
+    "Balance": 1000
+  },
+  {
+    "Id": "7c2e4a1d-8f4b-4d3d-9b6f-5f4b2c3e6a8d",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10205007",
+    "Balance": 1000
+  },
+  {
+    "Id": "b1d9f3c4-4e6f-4d5d-b6f4-2d3e9b7a5c8d",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10205008",
+    "Balance": 1000
+  },
+  {
+    "Id": "6b4b9413-4a42-49da-8cad-d1e277be9130",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10206",
+    "Balance": 1000
+  },
+  {
+    "Id": "f2c3d7e8-7f9b-4a1d-8b6c-3e6f5a4b7c9e",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "10206001",
+    "Balance": 1000
+  },
+  {
+    "Id": "e5969808-4fd9-4ec1-8843-cde369adc57d",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "2",
+    "Balance": 34000
+  },
+  {
+    "Id": "5abd750c-92da-4cab-9df6-c2b0148b6cd6",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "201",
+    "Balance": 17000
+  },
+  {
+    "Id": "bf85b6fe-bb34-4986-9ab0-356e074c2de5",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20101",
+    "Balance": 8500
+  },
+  {
+    "Id": "f2c3d7e8-7f9b-4a1d-8b6c-3e6f5a4b7c9f",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20101001",
+    "Balance": 850
+  },
+  {
+    "Id": "1d2f3a4b-8c6f-4d7e-9b1a-4e5f6c7b8d9e",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20101002",
+    "Balance": 850
+  },
+  {
+    "Id": "2a3c4d5e-9f8b-6c7d-3e4f-1b2a3c5d6e7f",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20101003",
+    "Balance": 850
+  },
+  {
+    "Id": "3b4d5e6f-1a2c-7d8e-9f3b-4c5d6e7f8a9b",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20101004",
+    "Balance": 850
+  },
+  {
+    "Id": "4c5d6e7f-8a9b-1c2d-3e4f-5b6c7d8e9f1a",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20101005",
+    "Balance": 850
+  },
+  {
+    "Id": "5d6e7f8a-1b2c-3d4e-5f6b-7c8d9e0f1a2b",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20101006",
+    "Balance": 850
+  },
+  {
+    "Id": "6e7f8a9b-2c3d-4e5f-6b7c-8d9e0f1a2b3c",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20101007",
+    "Balance": 850
+  },
+  {
+    "Id": "7f8a9b0c-3d4e-5f6b-7c8d-9e0f1a2b3c4d",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20101008",
+    "Balance": 850
+  },
+  {
+    "Id": "8a9b0c1d-4e5f-6b7c-8d9e-0f1a2b3c4d5e",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20101009",
+    "Balance": 850
+  },
+  {
+    "Id": "9b0c1d2e-5f6b-7c8d-9e0f-1a2b3c4d5e6f",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20101010",
+    "Balance": 850
+  },
+  {
+    "Id": "e129f541-3d9b-4588-8429-2000419807ca",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20102",
+    "Balance": 8500
+  },
+  {
+    "Id": "a53f26f8-b265-4c9a-8a4e-f555772f7587",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20102001",
+    "Balance": 2500
+  },
+  {
+    "Id": "37ef8c59-5b16-416d-86b8-a906a39a71aa",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20102002",
+    "Balance": 3000
+  },
+  {
+    "Id": "d6dd4253-3d4f-4491-b402-d7699200131b",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20102003",
+    "Balance": 3000
+  },
+  {
+    "Id": "49b15607-5c52-4715-997a-9904847a8b64",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "202",
+    "Balance": 17000
+  },
+  {
+    "Id": "700d54cd-dcf0-4c82-ba61-a5046e86670f",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20201",
+    "Balance": 8500
+  },
+  {
+    "Id": "5c4aadf9-10f5-4481-aa1b-76c44f18647e",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20201001",
+    "Balance": 1062.5
+  },
+  {
+    "Id": "0e4fca66-9905-47b8-9f06-ff6466a0084b",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20201002",
+    "Balance": 1062.5
+  },
+  {
+    "Id": "8c82c21c-97d4-4488-a339-7b262f784402",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20201003",
+    "Balance": 1062.5
+  },
+  {
+    "Id": "f97d409a-a375-4621-a27c-db1cf56630ea",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20201004",
+    "Balance": 1062.5
+  },
+  {
+    "Id": "f97d409a-a375-4621-a27c-db1cf56630ea",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20201005",
+    "Balance": 1062.5
+  },
+  {
+    "Id": "d5d69f3e-2525-4e2e-92fe-03dc39bee00e",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20201006",
+    "Balance": 1062.5
+  },
+  {
+    "Id": "a8858045-4d91-4c6a-8c76-83056258221a",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20201007",
+    "Balance": 1062.5
+  },
+  {
+    "Id": "f7c72d12-0540-455c-b443-feda72b779b8",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20201008",
+    "Balance": 1062.5
+  },
+  {
+    "Id": "c7784af2-4bb1-47b2-807d-87d6dc1084ea",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20202",
+    "Balance": 8500
+  },
+  {
+    "Id": "5ad9c2c6-ada7-426c-8834-dd6b92c6cce2",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20202001",
+    "Balance": 2500
+  },
+  {
+    "Id": "a3cf9892-cd48-41bf-bd3b-42219aca038b",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20202002",
+    "Balance": 3000
+  },
+  {
+    "Id": "b242af89-a7cd-4abb-8fd5-2aabdb8c66a0",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "20202003",
+    "Balance": 3000
+  },
+  {
+    "Id": "6e3e0f1f-5d63-48ae-bc9f-3e6fb4e4cf64",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "3",
+    "Balance": 20000
+  },
+  {
+    "Id": "be2c114c-016e-4878-a4f1-a28e53c5a51e",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "301",
+    "Balance": 6000
+  },
+  {
+    "Id": "384770d7-d81b-4376-be68-187a7fc50cec",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "301001",
+    "Balance": 6000
+  },
+  {
+    "Id": "56a65108-28f3-4a97-8a73-a520bfe08d7d",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "302",
+    "Balance": 6000
+  },
+  {
+    "Id": "c99abbb7-c187-45a9-a322-e998ff3af0b6",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "302001",
+    "Balance": 1500
+  },
+  {
+    "Id": "677b5c16-96cf-42a8-ae41-57430ac858d1",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "302002",
+    "Balance": 1500
+  },
+  {
+    "Id": "70f3529f-bbdf-4e53-ae0a-38fe9b950786",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "302003",
+    "Balance": 1500
+  },
+  {
+    "Id": "4854c143-a9b4-411f-b079-a30dd4b84ecb",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "302004",
+    "Balance": 1500
+  },
+  {
+    "Id": "36582b46-f203-4138-b284-903e6834a941",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "303",
+    "Balance": 8000
+  },
+  {
+    "Id": "3412a678-177d-413e-9b99-a6dfd173b5e2",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "303001",
+    "Balance": 2000
+  },
+  {
+    "Id": "28915929-4ac5-4086-8080-4426a2d9d77b",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "303002",
+    "Balance": 2000
+  },
+  {
+    "Id": "46a71d4a-6b0e-4c83-bdd4-39ab2b4d9820",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "303003",
+    "Balance": 2000
+  },
+  {
+    "Id": "a769a878-a484-4f15-9851-dd52af99b2fe",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "303004",
+    "Balance": 2000
+  },
+  {
+    "Id": "6a4c8c5c-72fe-49a8-905a-00d757870465",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "4",
+    "Balance": 25000
+  },
+  {
+    "Id": "28ae0ae0-d4e8-4fe9-905e-02494a6c30f9",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "401",
+    "Balance": 12500
+  },
+  {
+    "Id": "4afc119d-1179-4361-ba86-a2fb9d7ef9d7",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "401001",
+    "Balance": 3125
+  },
+  {
+    "Id": "1d54bbbd-659c-4245-892e-da00707827cd",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "401002",
+    "Balance": 3125
+  },
+  {
+    "Id": "b475a08b-f5d2-4b6b-b192-02017e094dd6",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "401003",
+    "Balance": 3125
+  },
+  {
+    "Id": "b8e2748b-66eb-4590-8c68-3517c68b9219",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "401004",
+    "Balance": 3125
+  },
+  {
+    "Id": "23882252-5917-4ed1-841f-8fc213de25c2",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "402",
+    "Balance": 12500
+  },
+  {
+    "Id": "57aa10cc-174a-452c-8eb5-7f34a1af4a22",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "402001",
+    "Balance": 6250
+  },
+  {
+    "Id": "caef0858-e29f-4e6a-9578-e6c3479958c2",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "402002",
+    "Balance": 6250
+  },
+  {
+    "Id": "0aa0a00b-daed-4b4a-a8fc-8166e226d067",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "5",
+    "Balance": 25000
+  },
+  {
+    "Id": "99cc02ea-81a1-46fa-abd0-be5afb3a4966",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "501",
+    "Balance": 12500
+  },
+  {
+    "Id": "93cb517f-78a7-4570-a284-8aaae9765194",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "501001",
+    "Balance": 1250
+  },
+  {
+    "Id": "d5240ffa-389f-4784-a5e2-1fcf44991134",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "501002",
+    "Balance": 1250
+  },
+  {
+    "Id": "e4b59366-5d36-4b6a-9ea9-f5d76bd16e79",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "501003",
+    "Balance": 1250
+  },
+  {
+    "Id": "1346e547-7eda-4be1-a6d7-fd13fb5c6e53",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "501004",
+    "Balance": 1250
+  },
+  {
+    "Id": "b5da9447-91d4-4035-a612-924e1fee7131",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "501005",
+    "Balance": 1250
+  },
+  {
+    "Id": "29f66567-1dd2-4866-9f39-cfe01a905e55",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "501006",
+    "Balance": 1250
+  },
+  {
+    "Id": "ac164fb9-f64f-4a74-87b9-ad39f24b3956",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "501007",
+    "Balance": 1250
+  },
+  {
+    "Id": "216c28ac-ae57-43ff-907e-bf894c105fd5",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "501008",
+    "Balance": 1250
+  },
+  {
+    "Id": "d06bdd15-c7d7-4c36-8b73-df01cb0410f9",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "501009",
+    "Balance": 1250
+  },
+  {
+    "Id": "774d71ec-77ba-4725-a917-2df7f90af4b4",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "501010",
+    "Balance": 1250
+  },
+  {
+    "Id": "4f2ddc5c-0d72-40c4-8fa6-a4ee37b622d4",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "502",
+    "Balance": 12500
+  },
+  {
+    "Id": "4789896a-a0bd-42de-a0cd-25f8b72df969",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "502001",
+    "Balance": 5000
+  },
+  {
+    "Id": "3b943d41-007f-4395-aef5-802f6c344f5c",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "502002",
+    "Balance": 2500
+  },
+  {
+    "Id": "61e7d629-391a-424e-8918-6a6d3a8f6f2a",
+    "Year": 2024,
+    "Month": 11,
+    "AccountNumber": "502003",
+    "Balance": 5000
+  }
+]
