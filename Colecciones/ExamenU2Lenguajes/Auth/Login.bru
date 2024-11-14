@@ -12,7 +12,7 @@ post {
 
 body:json {
   {
-    "email": "{{emailUser1Value}}",
+    "email": "{{emailUser2Value}}",
     "password": "{{passwordValue}}"
   }
 }
@@ -20,7 +20,7 @@ body:json {
 vars:pre-request {
   emailUser1Value: user1@examenu2.edu
   passwordValue: Temporal01*
-  emailUser2Value: use21@examenu2.edu
+  emailUser2Value: user2@examenu2.edu
 }
 
 script:post-response {

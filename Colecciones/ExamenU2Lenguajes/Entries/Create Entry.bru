@@ -1,0 +1,36 @@
+meta {
+  name: Create Entry
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{PATH}}/entries
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+    "date": "2024-11-14T05:35:41.240Z",
+    "description": "Revision Manual Auditoria",
+    "debitAccounts": [
+      {
+        "accountNumber": "20101008",
+        "entryPosition": "Debe",
+        "amount": 50
+      }
+    ],
+    "creditAccounts": [
+      {
+        "accountNumber": "302001",
+        "entryPosition": "Haber",
+        "amount": 50
+      }
+    ]
+  }
+}
