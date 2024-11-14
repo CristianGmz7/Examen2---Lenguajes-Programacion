@@ -309,6 +309,67 @@ public class EntriesService : IEntriesService
     }
 
     //Metodos PUT 
+    public async Task<ResponseDto<EntryResponseDto>> EditEntryAsync (EntryEditDto dto, int entryNumber)
+    {
+        using (var transaction = await _transactionalContext.Database.BeginTransactionAsync())
+        {
+            try
+            {
+                var entryEntity = await _transactionalContext.Entries.FirstOrDefaultAsync(e => e.EntryNumber == entryNumber);
+
+                if (entryEntity == null)
+                {
+                    await LogActionAsync($"{MessagesLogsConstant.ENTRY_UPDATE_ERROR}");
+                    return new ResponseDto<EntryResponseDto>
+                    {
+                        Status = false,
+                        StatusCode = 404,
+                        Message = "No se encontro el registro"
+                    };
+                }
+
+                entryEntity.Description = dto.Description;
+
+                _transactionalContext.Entries.Update(entryEntity);
+                await _transactionalContext.SaveChangesAsync();
+
+                //throw new Exception("Error para probar el rollback");
+                await transaction.CommitAsync();
+
+                await LogActionAsync($"{MessagesLogsConstant.ENTRY_UPDATE_SUCCESS}");
+
+                var responseDto = new EntryResponseDto
+                {
+                    EntryNumber = entryEntity.EntryNumber,
+                    Date = entryEntity.Date,
+                    Description = entryEntity.Description,
+                    IsEditable = entryEntity.IsEditable
+                };
+
+                return new ResponseDto<EntryResponseDto>
+                {
+                    Status = true,
+                    StatusCode = 200,
+                    Message = "Partida contable editada exitosamente",
+                    Data = responseDto
+                };
+            }
+            catch (Exception e)
+            {
+                await transaction.RollbackAsync();
+
+                await LogActionAsync($"{MessagesLogsConstant.ENTRY_UPDATE_ERROR}");
+                _logger.LogError(e, "Error al editar la partida contable");
+
+                return new ResponseDto<EntryResponseDto>
+                {
+                    StatusCode = 500,
+                    Status = false,
+                    Message = "Se produjo error al editar la partida contable"
+                };
+            }
+        }
+    }
 
     //Metodo para el manejo de los logs
     private async Task LogActionAsync(string action)

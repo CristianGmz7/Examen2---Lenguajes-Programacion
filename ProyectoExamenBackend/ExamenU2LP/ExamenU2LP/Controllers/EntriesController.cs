@@ -32,6 +32,14 @@ namespace ExamenU2LP.Controllers
         }
 
         //Peticiones PUT
+        [HttpPut("{entryNumber}")]
+        [Authorize(Roles = $"{RolesConstant.USER}")]
+        //ojo con el tipo de dato que se recibe de id si da error o no funciona cambiarlo a string y hacer parseo en el metodo
+        public async Task<ActionResult<ResponseDto<EntryResponseDto>>> Edit (EntryEditDto dto, int entryNumber)
+        {
+            var response = await _entriesService.EditEntryAsync(dto, entryNumber);
+            return StatusCode(response.StatusCode, response);
+        }
 
     }
 }

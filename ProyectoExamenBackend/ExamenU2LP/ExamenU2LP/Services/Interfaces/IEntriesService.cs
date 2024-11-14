@@ -6,4 +6,5 @@ namespace ExamenU2LP.Services.Interfaces;
 public interface IEntriesService
 {
     Task<ResponseDto<EntryResponseDto>> CreateEntryAsync(EntryCreateDto dto);
+    Task<ResponseDto<EntryResponseDto>> EditEntryAsync(EntryEditDto dto, int entryNumber);
 }
