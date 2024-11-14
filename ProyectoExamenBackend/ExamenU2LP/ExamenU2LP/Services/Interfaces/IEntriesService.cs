@@ -7,5 +7,6 @@ public interface IEntriesService
 {
     Task<ResponseDto<EntryResponseDto>> CreateEntryAsync(EntryCreateDto dto);
     Task<ResponseDto<EntryResponseDto>> EditEntryAsync(EntryEditDto dto, int entryNumber);
+    Task<ResponseDto<PaginationDto<List<EntryResponseDto>>>> GetEntriesListAsync(int page = 1);
     Task<ResponseDto<EntryResponseDto>> WriteOff(int entryNumber);
 }

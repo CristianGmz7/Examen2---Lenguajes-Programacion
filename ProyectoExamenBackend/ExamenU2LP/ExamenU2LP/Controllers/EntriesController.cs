@@ -21,6 +21,16 @@ namespace ExamenU2LP.Controllers
         }
 
         //Peticiones GET
+        //por el momento las dejaré anonymous para que aunque sea hacer sin que hayan problemas con el token
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<ActionResult<ResponseDto<PaginationDto<List<EntryResponseDto>>>>> GetAll(
+                int page = 1
+            )
+        {
+            var response = await _entriesService.GetEntriesListAsync(page);
+            return StatusCode(response.StatusCode, response);
+        }
 
         [HttpPost]
         [Authorize(Roles = $"{RolesConstant.USER}")]

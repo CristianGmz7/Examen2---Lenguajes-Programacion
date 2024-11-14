@@ -20,6 +20,7 @@ public class EntriesService : IEntriesService
     private readonly ILogger<EntriesService> _logger;
     private readonly IAuditService _auditService;
     private readonly IConfiguration _configuration;
+    private readonly int PAGE_SIZE;
 
     public EntriesService(
             TransactionalContext transactionalContext,
@@ -36,10 +37,87 @@ public class EntriesService : IEntriesService
         this._logger = logger;
         this._auditService = auditService;
         this._configuration = configuration;
+        PAGE_SIZE = configuration.GetValue<int>("Pagination:EntryPageSize");
     }
 
     //Metodos GET
     //Obtener todas las partidas contables, requiere paginación
+    public async Task<ResponseDto<PaginationDto<List<EntryResponseDto>>>> GetEntriesListAsync(
+            int page = 1
+        )
+    {
+        int startIndex = (page - 1) * PAGE_SIZE;
+
+        var entryEntityQuery = _transactionalContext.Entries
+            .Include(e => e.Details)
+            .Where(e => e.EntryNumber == e.EntryNumber);
+
+        int totalEntries = await entryEntityQuery.CountAsync();
+
+        int totalPages = (int)Math.Ceiling((double)totalEntries / PAGE_SIZE);
+
+        var entriesEntity = await _transactionalContext.Entries
+            .Include(e => e.Details)
+            .OrderByDescending(x => x.EntryNumber)          //probar si dejar OrderByDescending o OrderBy
+            .Skip(startIndex)
+            .Take(PAGE_SIZE)
+            .ToListAsync();
+
+        var entriesDtos = entriesEntity.Select(entry => new EntryResponseDto
+        {
+            EntryNumber = entry.EntryNumber,
+            Date = entry.Date,
+            Description = entry.Description,
+            IsEditable = entry.IsEditable,
+
+            DebitAccounts = entry.Details
+                .Where(d => d.EntryPosition == "Debe")
+                .Select(d => new EntryDetailResponseDto
+                {
+                    Id = d.Id,
+                    EntryNumber = d.EntryNumber,
+                    AccountNumber = d.AccountNumber,
+                    EntryPosition = d.EntryPosition,
+                    Amount = d.Amount
+                }).ToList(),
+
+            CreditAccounts = entry.Details
+            .Where(d => d.EntryPosition == "Haber")
+            .Select(d => new EntryDetailResponseDto
+            {
+                Id = d.Id,
+                EntryNumber = d.EntryNumber,
+                AccountNumber = d.AccountNumber,
+                EntryPosition = d.EntryPosition,
+                Amount = d.Amount
+            }).ToList()
+
+        }).ToList();
+
+        //PARA QUE ESTE METODO FUNCIONE TIENE QUE ESTAR UN TOKEN ACTIVO, O SEA ESTAR LOGUEADO
+        //Por lo que por el momento dejarlo comentado y dejar consultas anonimas para el mapeo y todo eso
+        //Cuando ya se implementé el token descomentarlo 
+
+        //await LogActionAsync($"{MessagesLogsConstant.ENTRY_SEARCH_SUCCESS}");     
+        return new ResponseDto<PaginationDto<List<EntryResponseDto>>>
+        {
+            StatusCode = 200,
+            Status = true,
+            Message = "Partidas encontradas satisfactoriamente",
+            Data = new PaginationDto<List<EntryResponseDto>>
+            {
+                CurrentPage = page,
+                PageSize = PAGE_SIZE,
+                TotalItems = totalEntries,
+                TotalPages = totalPages,
+                Items = entriesDtos,
+                HasPreviousPage = page > 1,
+                HasNextPage = page < totalPages,
+            }
+        };
+    }
+
+
     //Obtener partidas por rango de fechas, podria requerir paginacion
     //Buscar una partida contable (por id)
     //Buscar una partida contable por id usuario quien la creo
