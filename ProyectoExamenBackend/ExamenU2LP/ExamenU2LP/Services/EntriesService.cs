@@ -188,8 +188,7 @@ public class EntriesService : IEntriesService
 
                     if (account == null)
                     {
-                        await LogActionAsync($"Error: La cuenta {detail.AccountNumber} no existe en ChartAccounts.");
-                        continue; // Si no se encuentra la cuenta, omitir esta iteración
+                        continue; // Si no se encuentra la cuenta pasarse al siguiente elemento
                     }
 
                     var accountBalance = await _transactionalContext.AccountBalances
@@ -328,6 +327,18 @@ public class EntriesService : IEntriesService
                     };
                 }
 
+                //Verificar que la partida que se quiera modificar se pueda modificar
+                if (!entryEntity.IsEditable)
+                {
+                    await LogActionAsync($"{MessagesLogsConstant.ENTRY_UPDATE_ERROR}");
+                    return new ResponseDto<EntryResponseDto>
+                    {
+                        Status = false,
+                        StatusCode = 404,
+                        Message = "No se puede editar este registro porque fue dado de baja"
+                    };
+                }
+
                 entryEntity.Description = dto.Description;
 
                 _transactionalContext.Entries.Update(entryEntity);
@@ -366,6 +377,190 @@ public class EntriesService : IEntriesService
                     StatusCode = 500,
                     Status = false,
                     Message = "Se produjo error al editar la partida contable"
+                };
+            }
+        }
+    }
+
+    //metodo de dar de baja
+    public async Task<ResponseDto<EntryResponseDto>> WriteOff (int entryNumber)
+    {
+        using (var transaction = await _transactionalContext.Database.BeginTransactionAsync())
+        {
+            try
+            {
+                var entryEntity = await _transactionalContext.Entries
+                      .Include(e => e.Details) // cargar los detalles para cuando se necesiten para generar la contrapartida
+                      .FirstOrDefaultAsync(e => e.EntryNumber == entryNumber);
+
+                if (entryEntity == null)
+                {
+                    await LogActionAsync($"{MessagesLogsConstant.ENTRY_REVERSED_ERROR}");
+                    return new ResponseDto<EntryResponseDto>
+                    {
+                        Status = false,
+                        StatusCode = 404,
+                        Message = "No se encontro el registro"
+                    };
+                }
+
+                //Verificar que la partida que se quiera dar de baja no sea una partida que ya este dada de baja
+                if (!entryEntity.IsEditable)
+                {
+                    await LogActionAsync($"{MessagesLogsConstant.ENTRY_REVERSED_ERROR}");
+                    return new ResponseDto<EntryResponseDto>
+                    {
+                        Status = false,
+                        StatusCode = 404,
+                        Message = "No se puede dar de baja este registro porque fue dado de baja"
+                    };
+                }
+
+                //Hay que hacer que la partida original ya no sea editable
+                entryEntity.IsEditable = false;
+                _transactionalContext.Entries.Update(entryEntity);
+
+                // Creación de la contrapartida
+                //Verificar que se haya generado un numero
+                var newEntry = new EntryEntity
+                {
+                    Date = DateTime.Now,
+                    Description = $"Contrapartida de la partida {entryNumber}",
+                    IsEditable = false
+                };
+
+                await _transactionalContext.Entries.AddAsync(newEntry);
+                await _transactionalContext.SaveChangesAsync();
+
+                //La contrapartida tiene las mismas cuentas y cantidades de la partida pero invertidos
+                var newEntryDetails = entryEntity.Details.Select(detail => new EntryDetailEntity
+                {
+                    EntryNumber = newEntry.EntryNumber,
+                    AccountNumber = detail.AccountNumber,
+                    EntryPosition = detail.EntryPosition == "Debe" ? "Haber" : "Debe",
+                    Amount = detail.Amount
+                }).ToList();
+
+                await _transactionalContext.EntryDetails.AddRangeAsync(newEntryDetails);
+                await _transactionalContext.SaveChangesAsync();
+
+                // Actualizar los saldos de las cuentas de la contrapartida
+                foreach (var detail in newEntryDetails)
+                {
+                    var account = await _transactionalContext.ChartAccounts
+                                      .Include(a => a.BehaviorType)
+                                      .FirstOrDefaultAsync(a => a.AccountNumber == detail.AccountNumber);
+
+                    if (account == null)
+                    {
+                        continue;
+                    }
+
+                    var accountBalance = await _transactionalContext.AccountBalances
+                        .FirstOrDefaultAsync(ab => ab.AccountNumber == detail.AccountNumber &&
+                                                   ab.Year == newEntry.Date.Year &&
+                                                   ab.Month == newEntry.Date.Month);
+
+                    if (accountBalance == null)
+                    {
+                        accountBalance = new AccountBalanceEntity
+                        {
+                            Id = Guid.NewGuid(),
+                            AccountNumber = detail.AccountNumber,
+                            Year = newEntry.Date.Year,
+                            Month = newEntry.Date.Month,
+                            Balance = 0,
+                        };
+                        await _transactionalContext.AccountBalances.AddAsync(accountBalance);
+                    }
+
+                    bool isDebitBehavior = account.BehaviorType.Type == "Debe";
+                    bool isDebitEntryPosition = detail.EntryPosition == "Debe";
+
+                    if (isDebitBehavior)
+                    {
+                        accountBalance.Balance += isDebitEntryPosition ? detail.Amount : -detail.Amount;
+                    }
+                    else
+                    {
+                        accountBalance.Balance += isDebitEntryPosition ? -detail.Amount : detail.Amount;
+                    }
+                }
+
+                await _transactionalContext.SaveChangesAsync();
+
+                //Confirmar la transaccion para que los saldos sean actualizados correctamente
+                //throw new Exception("Error para probar el rollback");
+                await transaction.CommitAsync();
+
+                //Actualizar saldos de las cuentas padres
+                using (var updateTransaction = await _transactionalContext.Database.BeginTransactionAsync())
+                {
+                    foreach (var detail in newEntryDetails)
+                    {
+                        await UpdateParentBalancesAsync(detail.AccountNumber, newEntry.Date.Year, newEntry.Date.Month);
+                    }
+
+                    await updateTransaction.CommitAsync();
+                }
+
+                await LogActionAsync($"{MessagesLogsConstant.ENTRY_REVERSED_SUCCESS}");
+
+                //Mapeo del arreglo de cuentas del credito y debito de la contrapartida
+                var debitAccounts = newEntryDetails
+                    .Where(ed => ed.EntryPosition == "Debe")
+                    .Select(ed => new EntryDetailResponseDto
+                    {
+                        Id = ed.Id,
+                        EntryNumber = ed.EntryNumber,
+                        AccountNumber = ed.AccountNumber,
+                        EntryPosition = ed.EntryPosition,
+                        Amount = ed.Amount,
+                    })
+                    .ToList();
+
+                var creditAccounts = newEntryDetails
+                    .Where(ed => ed.EntryPosition == "Haber")
+                    .Select(ed => new EntryDetailResponseDto
+                    {
+                        Id = ed.Id,
+                        EntryNumber = ed.EntryNumber,
+                        AccountNumber = ed.AccountNumber,
+                        EntryPosition = ed.EntryPosition,
+                        Amount = ed.Amount
+                    })
+                    .ToList();
+
+                var responseDto = new EntryResponseDto
+                {
+                    EntryNumber = newEntry.EntryNumber,
+                    Date = newEntry.Date,
+                    Description = newEntry.Description,
+                    IsEditable = newEntry.IsEditable,
+                    DebitAccounts = debitAccounts,
+                    CreditAccounts = creditAccounts
+                };
+
+                return new ResponseDto<EntryResponseDto>
+                {
+                    Status = true,
+                    StatusCode = 201,
+                    Message = "Contrapartida creada exitosamente",
+                    Data = responseDto
+                };
+            }
+            catch(Exception e)
+            {
+                await transaction.RollbackAsync();
+
+                await LogActionAsync($"{MessagesLogsConstant.ENTRY_REVERSED_ERROR}");
+                _logger.LogError(e, "Error al revertir la partida contable");
+
+                return new ResponseDto<EntryResponseDto>
+                {
+                    StatusCode = 500,
+                    Status = false,
+                    Message = "Se produjo error al revertir la partida contable"
                 };
             }
         }

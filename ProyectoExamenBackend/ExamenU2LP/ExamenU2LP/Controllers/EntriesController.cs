@@ -41,5 +41,12 @@ namespace ExamenU2LP.Controllers
             return StatusCode(response.StatusCode, response);
         }
 
+        [HttpPut("writeOff/{entryNumber}")]
+        [Authorize(Roles = $"{RolesConstant.USER}")]
+        public async Task <ActionResult<ResponseDto<EntryResponseDto>>> WriteOff (int entryNumber)
+        {
+            var response = await _entriesService.WriteOff(entryNumber);
+            return StatusCode(response.StatusCode, response);
+        }
     }
 }

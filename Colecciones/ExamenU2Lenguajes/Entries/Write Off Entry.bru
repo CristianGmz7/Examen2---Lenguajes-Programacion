@@ -1,0 +1,15 @@
+meta {
+  name: Write Off Entry
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{PATH}}/entries/writeOff/5
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
