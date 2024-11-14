@@ -17,20 +17,31 @@ auth:bearer {
 body:json {
   {
     "date": "2024-11-14T05:35:41.240Z",
-    "description": "Revision Manual Auditoria",
+    "description": "Prueba Partida",
     "debitAccounts": [
+      {
+        "accountNumber": "10101001",
+        "entryPosition": "Debe",
+        "amount": 100
+      },
       {
         "accountNumber": "20101008",
         "entryPosition": "Debe",
-        "amount": 50
+        "amount": 200
       }
     ],
     "creditAccounts": [
       {
+        "accountNumber": "10104001",
+        "entryPosition": "Haber",
+        "amount": 150
+      },
+      {
         "accountNumber": "302001",
         "entryPosition": "Haber",
-        "amount": 50
+        "amount": 150
       }
     ]
   }
+  
 }

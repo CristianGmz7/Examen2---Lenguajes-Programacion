@@ -332,10 +332,9 @@ public class EntriesService : IEntriesService
         var account = await _transactionalContext.ChartAccounts
                          .FirstOrDefaultAsync(a => a.AccountNumber == accountNumber);
 
-        // Condición de parada: si se llega a la cuenta base "No aplica"
+        // Condición de parada cuando se llega a la cuenta base "No aplica"
         if (account == null || (account.ParentAccountNumber == "0" && account.Name == "No aplica"))
         {
-            // Salir de la recursión si estamos en la cuenta base
             return;
         }
 
@@ -346,6 +345,12 @@ public class EntriesService : IEntriesService
                             .ToListAsync();
 
         decimal newParentBalance = childAccounts.Sum(ca => ca.Balance);
+
+        // Evitar la creación de balance para la cuenta base "0" de No Aplica
+        if (account.ParentAccountNumber == "0")
+        {
+            return; 
+        }
 
         // Obtener o crear el balance de la cuenta padre
         var parentBalance = await _transactionalContext.AccountBalances
