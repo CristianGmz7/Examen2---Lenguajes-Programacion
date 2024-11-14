@@ -41,6 +41,7 @@ public class EntriesService : IEntriesService
     }
 
     //Metodos GET
+    //Se podria probar a implementar la parte de Log similar a la del Login
     //Obtener todas las partidas contables, requiere paginación
     public async Task<ResponseDto<PaginationDto<List<EntryResponseDto>>>> GetEntriesListAsync(
             int page = 1
@@ -118,9 +119,69 @@ public class EntriesService : IEntriesService
     }
 
 
-    //Obtener partidas por rango de fechas, podria requerir paginacion
     //Buscar una partida contable (por id)
-    //Buscar una partida contable por id usuario quien la creo
+    public async Task<ResponseDto<EntryResponseDto>> GetEntryByIdAsync (int entryNumber)
+    {
+        var entryEntity = await _transactionalContext.Entries
+            .Include(e => e.Details) 
+            .FirstOrDefaultAsync(e => e.EntryNumber == entryNumber);
+
+        if (entryEntity == null)
+        {
+            //Por el momento los logs los endpoints de obtener estaran bloqueados por el GetUserId del metodo y por habilitar Token en el bruno
+            //await LogActionAsync($"{MessagesLogsConstant.ENTRY_SEARCH_ERROR}");
+            return new ResponseDto<EntryResponseDto>
+            {
+                Status = false,
+                StatusCode = 404,
+                Message = "No se encontró la partida contable"
+            };
+        }
+
+        var entryDto = new EntryResponseDto
+        {
+            EntryNumber = entryEntity.EntryNumber,
+            Date = entryEntity.Date,
+            Description = entryEntity.Description,
+            IsEditable = entryEntity.IsEditable,
+
+            // Mapear los detalles de la partida a DebitAccounts y CreditAccounts
+            DebitAccounts = entryEntity.Details
+                .Where(d => d.EntryPosition == "Debe")
+                .Select(d => new EntryDetailResponseDto
+                {
+                    Id = d.Id,
+                    EntryNumber = d.EntryNumber,
+                    AccountNumber = d.AccountNumber,
+                    EntryPosition = d.EntryPosition,
+                    Amount = d.Amount
+                }).ToList(),
+
+            CreditAccounts = entryEntity.Details
+                .Where(d => d.EntryPosition == "Haber")
+                .Select(d => new EntryDetailResponseDto
+                {
+                    Id = d.Id,
+                    EntryNumber = d.EntryNumber,
+                    AccountNumber = d.AccountNumber,
+                    EntryPosition = d.EntryPosition,
+                    Amount = d.Amount
+                }).ToList()
+        };
+
+        //await LogActionAsync($"{MessagesLogsConstant.ENTRY_SEARCH_SUCCESS}");
+
+        return new ResponseDto<EntryResponseDto>
+        {
+            Status = true,
+            StatusCode = 200,
+            Message = "Partida contable encontrada exitosamente",
+            Data = entryDto
+        };
+    }
+
+    //Obtener partidas por rango de fechas, podria requerir paginacion
+    //Buscar una partida contable por id usuario quien la creo, hay que ver como se comporta por el Token y el AllowAnonymous y el _getByid
 
     //Metodo POST
     public async Task<ResponseDto<EntryResponseDto>> CreateEntryAsync (EntryCreateDto dto)

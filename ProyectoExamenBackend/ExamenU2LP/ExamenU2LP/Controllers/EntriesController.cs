@@ -22,6 +22,7 @@ namespace ExamenU2LP.Controllers
 
         //Peticiones GET
         //por el momento las dejaré anonymous para que aunque sea hacer sin que hayan problemas con el token
+        //en la respuesta de este servicio hay un comentario respecto a este
         [HttpGet]
         [AllowAnonymous]
         public async Task<ActionResult<ResponseDto<PaginationDto<List<EntryResponseDto>>>>> GetAll(
@@ -29,6 +30,14 @@ namespace ExamenU2LP.Controllers
             )
         {
             var response = await _entriesService.GetEntriesListAsync(page);
+            return StatusCode(response.StatusCode, response);
+        }
+
+        [HttpGet("{entryNumber}")]
+        [AllowAnonymous]
+        public async Task<ActionResult<ResponseDto<EntryResponseDto>>> GetById (int entryNumber)
+        {
+            var response = await _entriesService.GetEntryByIdAsync(entryNumber);
             return StatusCode(response.StatusCode, response);
         }
 
