@@ -40,6 +40,7 @@ public class Startup
         //Servicios de interfaces que se creen
         services.AddTransient<IAuthService, AuthService>();
         services.AddTransient<IAuditService, AuditService>();
+        services.AddTransient<IEntriesService, EntriesService>();
 
         //servicios de los logs irian aqui tambien
 

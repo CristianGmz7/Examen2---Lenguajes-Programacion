@@ -58,7 +58,7 @@ public class TransactionalSeeder
                 {
                     FirstName = "Usuario2",
                     LastName = "ExamenU2",
-                    Email = "use21@examenu2.edu",
+                    Email = "user2@examenu2.edu",
                     UserName = "user2@examenu2.edu",
                 };
 
