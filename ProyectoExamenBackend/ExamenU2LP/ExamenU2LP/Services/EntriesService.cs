@@ -8,6 +8,7 @@ using ExamenU2LP.Dtos.Common;
 using ExamenU2LP.Dtos.Entries;
 using ExamenU2LP.Dtos.EntriesDetails;
 using ExamenU2LP.Services.Interfaces;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace ExamenU2LP.Services;
@@ -20,6 +21,8 @@ public class EntriesService : IEntriesService
     private readonly ILogger<EntriesService> _logger;
     private readonly IAuditService _auditService;
     private readonly IConfiguration _configuration;
+    private readonly IHttpContextAccessor _httpContextAccessor;          //esto para validar si esta logueado o no al momento de colocar el id en el log de obtener registros
+    private readonly UserManager<UserEntity> _userManager;              //esto para validar si esta logueado o no al momento de colocar el id en el log de obtener registros
     private readonly int PAGE_SIZE;
 
     public EntriesService(
@@ -28,7 +31,9 @@ public class EntriesService : IEntriesService
             IMapper mapper,
             ILogger<EntriesService> logger,
             IAuditService auditService,
-            IConfiguration configuration
+            IConfiguration configuration,
+            IHttpContextAccessor httpContextAccessor,
+            UserManager<UserEntity> userManager
         )
     {
         this._transactionalContext = transactionalContext;
@@ -37,11 +42,11 @@ public class EntriesService : IEntriesService
         this._logger = logger;
         this._auditService = auditService;
         this._configuration = configuration;
+        this._httpContextAccessor = httpContextAccessor;
+        this._userManager = userManager;
         PAGE_SIZE = configuration.GetValue<int>("Pagination:EntryPageSize");
     }
 
-    //Metodos GET
-    //Se podria probar a implementar la parte de Log similar a la del Login
     //Obtener todas las partidas contables, requiere paginación
     public async Task<ResponseDto<PaginationDto<List<EntryResponseDto>>>> GetEntriesListAsync(
             int page = 1
@@ -95,11 +100,23 @@ public class EntriesService : IEntriesService
 
         }).ToList();
 
-        //PARA QUE ESTE METODO FUNCIONE TIENE QUE ESTAR UN TOKEN ACTIVO, O SEA ESTAR LOGUEADO
-        //Por lo que por el momento dejarlo comentado y dejar consultas anonimas para el mapeo y todo eso
-        //Cuando ya se implementé el token descomentarlo 
+        // Obtener el usuario actual de la autenticación (si está logueado)
+        var user = _httpContextAccessor.HttpContext?.User;
+        var userId = user?.Identity?.IsAuthenticated == true
+                    ? (await _userManager.FindByEmailAsync(user.Identity.Name))?.Id
+                    : "Anonymous";
 
-        //await LogActionAsync($"{MessagesLogsConstant.ENTRY_SEARCH_SUCCESS}");     
+        var logEntity = new LogEntity
+        {
+            Id = Guid.NewGuid(),
+            Date = DateTime.Now,
+            Action = $"{MessagesLogsConstant.ENTRY_SEARCH_SUCCESS}",
+            UserId = userId
+        };
+
+        await _logContext.Logs.AddAsync(logEntity);
+        await _logContext.SaveChangesAsync();
+
         return new ResponseDto<PaginationDto<List<EntryResponseDto>>>
         {
             StatusCode = 200,
@@ -171,6 +188,23 @@ public class EntriesService : IEntriesService
 
         //await LogActionAsync($"{MessagesLogsConstant.ENTRY_SEARCH_SUCCESS}");
 
+        // Obtener el usuario actual de la autenticación (si está logueado)
+        var user = _httpContextAccessor.HttpContext?.User;
+        var userId = user?.Identity?.IsAuthenticated == true
+                    ? (await _userManager.FindByEmailAsync(user.Identity.Name))?.Id
+                    : "Anonymous";
+
+        var logEntity = new LogEntity
+        {
+            Id = Guid.NewGuid(),
+            Date = DateTime.Now,
+            Action = $"{MessagesLogsConstant.ENTRY_SEARCH_SUCCESS}",
+            UserId = userId
+        };
+
+        await _logContext.Logs.AddAsync(logEntity);
+        await _logContext.SaveChangesAsync();
+
         return new ResponseDto<EntryResponseDto>
         {
             Status = true,
@@ -179,9 +213,6 @@ public class EntriesService : IEntriesService
             Data = entryDto
         };
     }
-
-    //Obtener partidas por rango de fechas, podria requerir paginacion
-    //Buscar una partida contable por id usuario quien la creo, hay que ver como se comporta por el Token y el AllowAnonymous y el _getByid
 
     //Metodo POST
     public async Task<ResponseDto<EntryResponseDto>> CreateEntryAsync (EntryCreateDto dto)

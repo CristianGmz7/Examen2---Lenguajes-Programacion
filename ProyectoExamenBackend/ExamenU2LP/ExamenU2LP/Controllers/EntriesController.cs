@@ -20,9 +20,6 @@ namespace ExamenU2LP.Controllers
             this._entriesService = entriesService;
         }
 
-        //Peticiones GET
-        //por el momento las dejaré anonymous para que aunque sea hacer sin que hayan problemas con el token
-        //en la respuesta de este servicio hay un comentario respecto a este
         [HttpGet]
         [AllowAnonymous]
         public async Task<ActionResult<ResponseDto<PaginationDto<List<EntryResponseDto>>>>> GetAll(
