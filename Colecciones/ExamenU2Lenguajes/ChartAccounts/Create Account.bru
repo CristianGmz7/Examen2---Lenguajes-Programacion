@@ -1,0 +1,22 @@
+meta {
+  name: Create Account
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{PATH}}/chartsAccounts
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+    "parentAccountNumber": "10101001",
+    "name": "Caja general"
+  }
+}

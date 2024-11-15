@@ -1,0 +1,21 @@
+meta {
+  name: Edit Account
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{PATH}}/chartsAccounts/1010100102
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+    "name": "Caja general"
+  }
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Get All Accounts
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{PATH}}/chartsAccounts?page=14
+  body: none
+  auth: bearer
+}
+
+query {
+  page: 14
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
