@@ -41,6 +41,7 @@ public class Startup
         services.AddTransient<IAuthService, AuthService>();
         services.AddTransient<IAuditService, AuditService>();
         services.AddTransient<IEntriesService, EntriesService>();
+        services.AddTransient<IChartsAccountsService, ChartsAccountsService>();
 
         //servicios de los logs irian aqui tambien
 
