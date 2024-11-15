@@ -1,0 +1,47 @@
+meta {
+  name: Create Entry
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{PATH}}/entries
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+    "date": "2024-11-14T05:35:41.240Z",
+    "description": "Prueba Partida",
+    "debitAccounts": [
+      {
+        "accountNumber": "10101001",
+        "entryPosition": "Debe",
+        "amount": 100
+      },
+      {
+        "accountNumber": "20101008",
+        "entryPosition": "Debe",
+        "amount": 200
+      }
+    ],
+    "creditAccounts": [
+      {
+        "accountNumber": "10104001",
+        "entryPosition": "Haber",
+        "amount": 150
+      },
+      {
+        "accountNumber": "302001",
+        "entryPosition": "Haber",
+        "amount": 150
+      }
+    ]
+  }
+  
+}

@@ -1,4 +1,5 @@
-﻿using ExamenU2LP.Databases.LogDatabase;
+﻿using ExamenU2LP.Constants;
+using ExamenU2LP.Databases.LogDatabase;
 using ExamenU2LP.Databases.LogDatabase.Entities;
 using ExamenU2LP.Databases.TransactionalDatabase;
 using ExamenU2LP.Databases.TransactionalDatabase.Entities;
@@ -55,8 +56,8 @@ public class AuthService : IAuthService
         {
             Id = Guid.NewGuid(),
             Date = DateTime.Now,
-            Action = result.Succeeded ? "Sesión iniciada correctamente" : "Error al iniciar sesión, intentelo más tarde",
-            UserId = result.Succeeded ? (await _userManager.FindByEmailAsync(dto.Email)).Id : null
+            Action = result.Succeeded ? $"{MessagesLogsConstant.LOGIN_SUCCESS}" : $"{MessagesLogsConstant.LOGIN_ERROR}",
+            UserId = result.Succeeded ? (await _userManager.FindByEmailAsync(dto.Email)).Id : "Anonymous"
         };
 
         await _logContext.Logs.AddAsync(logEntity);
@@ -115,8 +116,6 @@ public class AuthService : IAuthService
 
     //posiblemente incorporar un metodo de cerrar sesion
 
-    //register      (este no será necesario)
-    //refreshtoken      (este no será necesario)
 
     //metodos adicionales
     private async Task<List<Claim>> GetClaims(UserEntity userEntity)

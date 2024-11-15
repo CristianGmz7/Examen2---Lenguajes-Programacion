@@ -1,0 +1,21 @@
+meta {
+  name: Edit Entry
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{PATH}}/entries/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+    "description": "Prueba editar primera partida"
+  }
+}

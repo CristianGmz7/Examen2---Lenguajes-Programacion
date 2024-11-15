@@ -40,6 +40,7 @@ public class Startup
         //Servicios de interfaces que se creen
         services.AddTransient<IAuthService, AuthService>();
         services.AddTransient<IAuditService, AuditService>();
+        services.AddTransient<IEntriesService, EntriesService>();
         services.AddTransient<IChartsAccountsService, ChartsAccountsService>();
 
         //servicios de los logs irian aqui tambien
@@ -73,16 +74,16 @@ public class Startup
         services.AddAutoMapper(typeof(AutoMapperProfile));
 
         //cors (habilitar cuando se haga conexion con frontend)
-        //services.AddCors(opt =>
-        //{
-        //    var allowURLS = Configuration.GetSection("AllowURLS").Get<string[]>();
+        services.AddCors(opt =>
+        {
+            var allowURLS = Configuration.GetSection("AllowURLS").Get<string[]>();
 
-        //    opt.AddPolicy("CorsPolicy", builder => builder
-        //    .WithOrigins(allowURLS)
-        //    .AllowAnyMethod()
-        //    .AllowAnyHeader()
-        //    .AllowCredentials());
-        //});
+            opt.AddPolicy("CorsPolicy", builder => builder
+            .WithOrigins(allowURLS)
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .AllowCredentials());
+        });
 
     }
 
@@ -97,7 +98,7 @@ public class Startup
         app.UseHttpsRedirection();
         app.UseRouting();  //useRouting
 
-        //app.UseCors("CorsPolicy");        //(habilitar cuando se haga conexion con frontend)
+        app.UseCors("CorsPolicy");        //(habilitar cuando se haga conexion con frontend)
 
         app.UseAuthentication();    //middleWare
         app.UseAuthorization();
