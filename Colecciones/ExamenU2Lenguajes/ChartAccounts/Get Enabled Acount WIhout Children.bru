@@ -1,0 +1,15 @@
+meta {
+  name: Get Enabled Acount WIhout Children
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{PATH}}/chartsAccounts/enabled-no-children
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}

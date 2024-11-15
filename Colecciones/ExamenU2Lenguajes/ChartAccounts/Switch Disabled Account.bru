@@ -1,0 +1,21 @@
+meta {
+  name: Switch Disabled Account
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{PATH}}/chartsAccounts/switchDisabledAccount/1010100102
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+    "name": "Caja general"
+  }
+}

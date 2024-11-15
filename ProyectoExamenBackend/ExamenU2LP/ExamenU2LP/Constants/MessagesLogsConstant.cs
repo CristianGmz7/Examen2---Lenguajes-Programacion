@@ -17,6 +17,7 @@
         public const string ACCOUNT_ADD_SUCCESS = "Cuenta agregada al catálogo correctamente.";
         public const string ACCOUNT_UPDATE_SUCCESS = "Cuenta modificada en el catálogo correctamente.";
         public const string ACCOUNT_DISABLED_SUCCESS = "Cuenta deshabilitada del catálogo correctamente.";
+        public const string ACCOUNT_ENABLED_SUCCESS = "Cuenta habilitada del catálogo correctamente.";
         public const string ACCOUNT_SEARCH_ERROR = "Error al realizar la búsqueda en el catálogo de cuentas.";
         public const string ACCOUNT_ADD_ERROR = "Error al agregar la cuenta al catálogo.";
         public const string ACCOUNT_UPDATE_ERROR = "Error al modificar la cuenta en el catálogo.";

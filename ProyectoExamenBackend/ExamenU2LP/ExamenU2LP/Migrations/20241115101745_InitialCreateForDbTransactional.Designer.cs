@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ExamenU2LP.Migrations
 {
     [DbContext(typeof(TransactionalContext))]
-    [Migration("20241113185410_InitialCreateForDbTransactional")]
+    [Migration("20241115101745_InitialCreateForDbTransactional")]
     partial class InitialCreateForDbTransactional
     {
         /// <inheritdoc />
