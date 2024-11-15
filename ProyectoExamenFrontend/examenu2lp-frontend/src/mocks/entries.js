@@ -1,0 +1,7 @@
+export const partidas =
+[ 
+  { numero: 1, fecha: '2024-11-15', descripcion: 'Compra de materiales', debitAccounts: [ { id: '1', entryNumber: 0, accountNumber: '101', accountName: 'Caja', entryPosition: 'debit', amount: 500 }, ], creditAccounts: [ { id: '2', entryNumber: 0, accountNumber: '202', accountName: 'Proveedores', entryPosition: 'credit', amount: 500 }, ], },
+  { numero: 1, fecha: '2024-11-15', descripcion: 'Compra de materiales', debitAccounts: [ { id: '1', entryNumber: 0, accountNumber: '101', accountName: 'Caja', entryPosition: 'debit', amount: 500 }, ], creditAccounts: [ { id: '2', entryNumber: 0, accountNumber: '202', accountName: 'Proveedores', entryPosition: 'credit', amount: 500 }, ], },
+  { numero: 1, fecha: '2024-11-15', descripcion: 'Compra de materiales', debitAccounts: [ { id: '1', entryNumber: 0, accountNumber: '101', accountName: 'Caja', entryPosition: 'debit', amount: 500 }, ], creditAccounts: [ { id: '2', entryNumber: 0, accountNumber: '202', accountName: 'Proveedores', entryPosition: 'credit', amount: 500 }, ], },
+  { numero: 1, fecha: '2024-11-15', descripcion: 'Compra de materiales', debitAccounts: [ { id: '1', entryNumber: 0, accountNumber: '101', accountName: 'Caja', entryPosition: 'debit', amount: 500 }, ], creditAccounts: [ { id: '2', entryNumber: 0, accountNumber: '202', accountName: 'Proveedores', entryPosition: 'credit', amount: 500 }, ], },
+];
