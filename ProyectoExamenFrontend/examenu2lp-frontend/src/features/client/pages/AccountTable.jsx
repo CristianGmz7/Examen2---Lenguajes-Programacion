@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 export function AccountTable() {
   const accounts = [
     { accountNumber: "001", name: "Caja", month: "Noviembre", year: 2024, balance: 5000 },
@@ -6,8 +8,10 @@ export function AccountTable() {
     { accountNumber: "004", name: "Acreedores", month: "Noviembre", year: 2024, balance: 12000 },
   ];
 
+  const navigate = useNavigate();
+  
   const handleAddAccount = () => {
-    alert("Agregar nueva cuenta");
+    navigate("/createAccountPage");
   };
 
   return (

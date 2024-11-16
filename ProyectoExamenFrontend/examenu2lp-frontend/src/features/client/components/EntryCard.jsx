@@ -1,36 +1,51 @@
-export  function EntryCard({ entry }) {
+export function EntryCard({ entry }) {
   return (
-    <div className="border rounded-lg">
-      <table className="table-auto w-full text-left">
-        <thead className="bg-gray-100">
+    <div className="border rounded-lg shadow p-4">
+      {/* Encabezado */}
+      <div className="pb-4">
+        <h2 className="text-lg font-semibold">Partida #{entry.id}</h2>
+        <p className="text-sm text-gray-500">{entry.date}</p>
+      </div>
+      {/* Tabla de Items */}
+      <table className="w-full mt-2">
+        <thead>
           <tr>
-            <th className="p-2 w-[200px]">Partida #{entry.id}</th>
-            <th className="p-2">{entry.date}</th>
-            <th className="p-2 text-right">Debe</th>
-            <th className="p-2 text-right">Haber</th>
+            <th className="text-left text-sm font-semibold text-gray-700">
+              N° de Cuenta
+            </th>
+            <th className="text-left text-sm font-semibold text-gray-700">
+              
+            </th>
+            <th className="text-right text-sm font-semibold text-gray-700">
+              Débito
+            </th>
+            <th className="text-right text-sm font-semibold text-gray-700">
+              Crédito
+            </th>
           </tr>
         </thead>
         <tbody>
           {entry.items.map((item, index) => (
             <tr key={index} className="border-t">
-              <td className="p-2"></td>
-              <td className="p-2">{item.description}</td>
-              <td className="p-2 text-right">
-                {item.debit > 0 ? item.debit : ""}
-              </td>
-              <td className="p-2 text-right">
-                {item.credit > 0 ? item.credit : ""}
-              </td>
+              <td className="py-2 text-gray-800">{item.accountNumber}</td>
+              <td className="py-2 text-gray-800">{item.description}</td>
+              <td className="py-2 text-right text-gray-800">{item.debit}</td>
+              <td className="py-2 text-right text-gray-800">{item.credit}</td>
             </tr>
           ))}
-          <tr className="border-t bg-gray-50">
-            <td className="p-2 font-semibold">Descripción</td>
-            <td className="p-2"></td>
-            <td className="p-2 text-right font-medium">{entry.total}</td>
-            <td className="p-2 text-right font-medium">{entry.total}</td>
-          </tr>
         </tbody>
       </table>
+      {/* Descripción adicional después de la tabla */}
+      <div className="mt-4 text-gray-600">
+        <p>
+          <strong>Descripción: </strong>Este es el detalle de la partida contable
+          #{entry.id}.
+        </p>
+      </div>
+      {/* Total */}
+      <div className="flex justify-end mt-4">
+        <span className="text-right font-semibold">Total: {entry.total}</span>
+      </div>
     </div>
   );
 }

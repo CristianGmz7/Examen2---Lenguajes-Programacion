@@ -1,7 +1,3 @@
-// import {EntriesList} from "../components/EntriesList"
-// import { partidas } from "../../../mocks/entries"
- 'lucide'
-
 import { useNavigate } from "react-router-dom";
 
 export function HomePage() {
@@ -11,10 +7,15 @@ export function HomePage() {
     if (page === "entriesList") {
       navigate("/entriesList");
     } else if (page === "accountTable") {
-      navigate("/accounTable");
+      navigate("/accountTable");
+    } else if (page === "createAccountPage") {
+      navigate("/createAccountPage");
+    } else if (page === "createEntryPage") {
+      navigate("/createEntryPage");
+    } else if (page === "viewLog") {
+      navigate("/viewLog");
     }
   };
-
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -26,21 +27,33 @@ export function HomePage() {
 
         <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           <button 
-          onClick={() => handleNavigate("accountTable")}
-          className="h-20 text-lg flex items-center justify-center border border-gray-300 rounded-lg hover:bg-gray-100">
+            onClick={() => handleNavigate("accountTable")}
+            className="h-20 text-lg flex items-center justify-center border border-gray-300 rounded-lg hover:bg-gray-100">
             📖 Gestionar Cuentas
           </button>
           <button 
-          onClick={() => handleNavigate("entriesList")}
-          className="h-20 text-lg flex items-center justify-center border border-gray-300 rounded-lg hover:bg-gray-100">
+            onClick={() => handleNavigate("entriesList")}
+            className="h-20 text-lg flex items-center justify-center border border-gray-300 rounded-lg hover:bg-gray-100">
             📄 Gestionar Partidas Contables
           </button>
-          <button className="h-20 text-lg flex items-center justify-center border border-gray-300 rounded-lg hover:bg-gray-100">
+          <button 
+            onClick={() => handleNavigate("createAccountPage")}
+            className="h-20 text-lg flex items-center justify-center border border-gray-300 rounded-lg hover:bg-gray-100">
             ➕ Crear Nueva Cuenta
           </button>
-          <button className="h-20 text-lg flex items-center justify-center border border-gray-300 rounded-lg hover:bg-gray-100">
+          <button 
+            onClick={() => handleNavigate("createEntryPage")}
+            className="h-20 text-lg flex items-center justify-center border border-gray-300 rounded-lg hover:bg-gray-100">
             ➕ Crear Nueva Partida Contable
           </button>
+          {/* Botón "Ver Log" ocupa toda la fila y está centrado */}
+          <div className="col-span-1 md:col-span-2 flex justify-center">
+            <button 
+              onClick={() => handleNavigate("viewLog")}
+              className="h-20 w-full max-w-sm text-lg flex items-center justify-center border border-gray-300 rounded-lg hover:bg-gray-100">
+              📜 Ver Log
+            </button>
+          </div>
         </div>
 
         <div className="bg-gray-100 p-6 rounded-lg">
@@ -53,7 +66,5 @@ export function HomePage() {
         </div>
       </div>
     </div>
-    // <EntriesList partidas={partidas}/>
-
-  )
+  );
 }

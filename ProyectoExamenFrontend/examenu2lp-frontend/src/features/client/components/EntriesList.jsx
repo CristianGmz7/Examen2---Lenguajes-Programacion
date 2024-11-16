@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { EntryCard } from "./EntryCard";
 
 export function EntriesList() {
@@ -6,8 +7,13 @@ export function EntriesList() {
       id: 1,
       date: "15 de noviembre",
       items: [
-        { description: "Bancos", debit: 500, credit: 0 },
-        { description: "Acreedores", debit: 0, credit: 500 },
+        { accountNumber: "1101", description: "Bancos", debit: 500, credit: 0 },
+        {
+          accountNumber: "2101",
+          description: "Acreedores",
+          debit: 0,
+          credit: 500,
+        },
       ],
       total: 500,
     },
@@ -15,9 +21,19 @@ export function EntriesList() {
       id: 2,
       date: "15 de noviembre",
       items: [
-        { description: "Terrenos", debit: 1000, credit: 0 },
-        { description: "Bancos", debit: 0, credit: 500 },
-        { description: "Acreedores", debit: 0, credit: 500 },
+        {
+          accountNumber: "1201",
+          description: "Terrenos",
+          debit: 1000,
+          credit: 0,
+        },
+        { accountNumber: "1101", description: "Bancos", debit: 0, credit: 500 },
+        {
+          accountNumber: "2101",
+          description: "Acreedores",
+          debit: 0,
+          credit: 500,
+        },
       ],
       total: 1000,
     },
@@ -25,16 +41,27 @@ export function EntriesList() {
       id: 3,
       date: "15 de noviembre",
       items: [
-        { description: "Ventas", debit: 500, credit: 0 },
-        { description: "Otros Ingresos", debit: 500, credit: 0 },
-        { description: "Perdidas y Ganancias", debit: 0, credit: 1000 },
+        { accountNumber: "4101", description: "Ventas", debit: 500, credit: 0 },
+        {
+          accountNumber: "4201",
+          description: "Otros Ingresos",
+          debit: 500,
+          credit: 0,
+        },
+        {
+          accountNumber: "5301",
+          description: "Perdidas y Ganancias",
+          debit: 0,
+          credit: 1000,
+        },
       ],
       total: 1000,
     },
   ];
 
+  const navigate = useNavigate();
   const handleAddEntry = () => {
-    alert("Agregar nueva partida contable");
+    navigate("/createEntryPage");
   };
 
   return (
